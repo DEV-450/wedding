@@ -1,0 +1,142 @@
+:root {
+  --foreground-color: #352f44;
+  --background-color: #f0ece2;
+  --bg-details-color: #c7b198;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  height: 100dvh;
+
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:visited {
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--foreground-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background: no-repeat top left / 25% url("./assets/upper-left.png"), no-repeat
+    bottom right / 25% url("./assets/lower-right.png");
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 95%;
+  margin-bottom: 1rem;
+}
+
+h1 > span {
+  font-size: 2rem;
+}
+
+.invite {
+  position: relative;
+}
+
+.invite::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  transform: translate(-3.75rem, -1.875rem);
+  background: no-repeat right / 60% url("assets/heart.svg");
+}
+
+.date-box {
+  padding-inline: 0.938rem;
+  background-color: var(--bg-details-color);
+  color: var(--foreground-color);
+  margin-block: 1rem;
+  position: relative;
+}
+
+.date-box > div {
+  position: absolute;
+  top: -0.125rem;
+}
+
+div.left {
+  height: 2.813rem;
+  width: 3.125rem;
+  left: 0;
+  transform: translate(-108%);
+  background: no-repeat right / 60% url("assets/left.svg");
+}
+
+div.right {
+  height: 2.813rem;
+  width: 3.125rem;
+  right: 0;
+  transform: translate(108%);
+  background: no-repeat left / 60% url("assets/right.svg");
+}
+
+time {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+}
+
+/* Styles for screens larger than 768px */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 125%;
+  }
+
+  body {
+    display: flex;
+    background-color: var(--bg-details-color);
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    height: 35rem;
+    width: 50rem;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+  }
+}

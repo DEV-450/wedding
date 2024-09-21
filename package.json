@@ -1,0 +1,17 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "virtual wedding invite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server -c ./bs-config.json",
+    "format": "biome check --write ."
+  },
+  "keywords": [],
+  "author": "Dam450",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.2",
+    "lite-server": "^2.6.1"
+  }
+}
