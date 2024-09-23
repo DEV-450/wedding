@@ -24,6 +24,7 @@ body {
   background-color: var(--background-color);
   color: var(--foreground-color);
   height: 100dvh;
+  min-height: 600px;
 
   font-family: "Playpen Sans", cursive;
   font-optical-sizing: auto;
